@@ -2,6 +2,7 @@ projects:
 - name: dev
   dir: .
   workspace: dev
+  workflow: dev
 
 workflows:
   dev:
