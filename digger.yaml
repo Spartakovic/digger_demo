@@ -10,5 +10,5 @@ workflows:
         - run: rm -rf .terraform
         - init
         - plan:
-            extra_args: ["-var-file=vars/dev.tfvars"]
+          extra_args: ["-var-file=vars/dev.tfvars"]
 
