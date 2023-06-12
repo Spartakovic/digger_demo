@@ -1,4 +1,15 @@
 projects:
 - name: dev
   dir: .
-  workspace: default
+  workspace: dev
+  workflow: dev
+
+workflows:
+  dev:
+    plan:
+      steps:
+        - run: rm -rf .terraform
+        - init
+        - plan:
+          extra_args: ["-var-file=vars/dev.tfvars"]
+
