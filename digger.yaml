@@ -1,4 +1,26 @@
 projects:
-- name: dev
-  dir: .
-  workspace: default
+- name: a
+  dir: ./a
+  depends_on: ['b']
+- name: b
+  dir: ./b
+  depends_on: ['c']
+- name: c
+  dir: ./c
+  depends_on: ['d', 'e', 'f']
+- name: d
+  dir: ./d
+- name: e
+  dir: ./e
+  depends_on: ['f']
+- name: f
+  dir: ./f
+  depends_on: ['i']
+- name: g
+  dir: ./g
+  depends_on: ['i']
+- name: h
+  dir: ./h
+  depends_on: ['a']
+- name: i
+  dir: ./i

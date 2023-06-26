@@ -6,7 +6,6 @@ on:
     types: [ closed, opened, synchronize, reopened ]
   issue_comment:
     types: [created]
-    if: contains(github.event.comment.body, 'digger')
   workflow_dispatch:
 
 jobs:
@@ -16,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: digger tfrun
-        uses: diggerhq/digger@fix/extra-args    
+        uses: diggerhq/digger@develop  
         with:
           setup-aws: true
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
