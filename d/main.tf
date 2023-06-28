@@ -1,1 +1,1 @@
-    resource "null_resource" "d1" {}
+    resource "null_resource" "d2" {}
