@@ -1,1 +1,1 @@
-    resource "null_resource" "f" {}
+    resource "null_resource" "f1" {}
