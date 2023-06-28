@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: digger tfrun
-        uses: diggerhq/digger@develop  
+        uses: diggerhq/digger@feat/reporting-strategy 
         with:
           setup-aws: true
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
